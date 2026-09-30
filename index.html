@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Our Friendship ❤️</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #03030d;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(125, 40, 190, .45),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(20, 100, 180, .35),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(190, 30, 130, .25),
+            transparent 35%
+        ),
+
+        #03030d;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -5;
+
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    animation:
+        twinkle
+        2s infinite alternate;
+}
+
+@keyframes twinkle {
+
+    0% {
+        opacity: .15;
+        transform: scale(.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-button {
+
+    position: fixed;
+
+    right: 25px;
+    top: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255,255,255,.3);
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    transition: .3s;
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+
+    font-size: 14px;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    color: #d6a5ff;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(60px, 11vw, 125px);
+
+    line-height: .9;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #d88cff,
+            #7ddcff,
+            #ffffff
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradientMove
+        6s linear infinite;
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin: 35px auto;
+
+    color: #c6c6d6;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.primary-button {
+
+    padding:
+        15px 32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9b4dff,
+            #e83e9e
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 35px
+        rgba(190,80,255,.35);
+
+    transition: .3s;
+}
+
+.primary-button:hover {
+
+    transform: translateY(-4px)
+               scale(1.04);
+
+    box-shadow:
+        0 0 50px
+        rgba(220,80,255,.55);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+    padding: 110px 7%;
+}
+
+.section-title {
+
+    text-align: center;
+
+    font-size:
+        clamp(32px,5vw,48px);
+
+    margin-bottom: 15px;
+}
+
+.section-description {
+
+    text-align: center;
+
+    color: #9d9daf;
+
+    margin-bottom: 60px;
+}
+
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+.counter {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+}
+
+.counter-box {
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+.counter-box h2 {
+
+    font-size: 38px;
+
+    color: #d89cff;
+}
+
+.counter-box p {
+
+    color: #999;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   PHOTO GALLERY
+========================================================= */
+
+.gallery {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.photo {
+
+    height: 340px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+}
+
+.photo img {
+
+    
+
+    transition:
+        transform .7s;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo-info {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 35px 20px 20px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+}
+
+.photo-info h3 {
+    margin-bottom: 5px;
+}
+
+.photo-info p {
+    color: #bbb;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    position: relative;
+}
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            #a855f7,
+            #ec4899
+        );
+}
+
+.timeline-item {
+
+    width: 50%;
+
+    padding:
+        15px 40px;
+
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+
+    margin-left: 50%;
+}
+
+.timeline-card {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+}
+
+.timeline-card h3 {
+
+    color: #d69cff;
+
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ENVELOPE SECTION
+========================================================= */
+
+.letter-section {
+
+    min-height: 800px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   NEW ENVELOPE
+========================================================= */
+
+.envelope-area {
+
+    margin-top: 50px;
+
+    width: 380px;
+
+    height: 280px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+}
+
+
+/* Envelope */
+
+.envelope {
+
+    position: relative;
+
+    width: 360px;
+
+    height: 220px;
+
+    cursor: pointer;
+
+    transition:
+        transform .8s,
+        opacity .8s;
+}
+
+
+/* Envelope body */
+
+.envelope-body {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius:
+        0 0 18px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #669dd0,
+            #35a7c7
+        );
+
+    box-shadow:
+        0 25px 50px
+        rgba(0,0,0,.45);
+
+    z-index: 2;
+}
+
+
+/* Envelope front */
+
+.envelope-front {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 125px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e956eb,
+            #cf47c6
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 55%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+
+    border-radius:
+        0 0 18px 18px;
+
+    z-index: 5;
+}
+
+
+/* Top flap */
+
+.envelope-flap {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 125px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ea62c8,
+            #ef59d9
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform .8s
+        cubic-bezier(.4,0,.2,1);
+
+    z-index: 6;
+}
+
+
+/* Heart */
+
+.envelope-heart {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-size: 38px;
+
+    z-index: 7;
+
+    transition: .4s;
+}
+
+
+/* Hover */
+
+.envelope:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+
+/* OPENING */
+
+.envelope.open {
+
+    transform:
+        translateY(30px)
+        scale(.92);
+
+    opacity: .7;
+}
+
+.envelope.open
+.envelope-flap {
+
+    transform:
+        rotateX(180deg);
+}
+
+.envelope.open
+.envelope-heart {
+
+    opacity: 0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(0);
+}
+
+
+/* Click instruction */
+
+.click-message {
+
+    margin-top: 35px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    animation:
+        pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+
+    0%,100% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   LETTER MODAL
+========================================================= */
+
+.letter-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(0,0,0,.78);
+
+    backdrop-filter:
+        blur(12px);
+
+    z-index: 2000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .5s,
+        visibility .5s;
+}
+
+.letter-overlay.show {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* Actual letter */
+
+.letter-card {
+
+    width: min(700px, 95vw);
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 50px 45px;
+
+    position: relative;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaff,
+            #fff1f8
+        );
+
+    color: #302333;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.6);
+
+    transform:
+        translateY(80px)
+        scale(.85);
+
+    transition:
+        transform .6s
+        cubic-bezier(.22,1,.36,1);
+}
+
+.letter-overlay.show
+.letter-card {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* Close */
+
+.close-letter {
+
+    position: absolute;
+
+    right: 18px;
+    top: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        #eee;
+
+    color: #555;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* Letter content */
+
+.letter-card h2 {
+
+    text-align: center;
+
+    color: #e73ad3;
+
+    font-size:
+        clamp(25px,5vw,38px);
+
+    margin-bottom: 30px;
+}
+
+.letter-card .big-heart {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.letter-card p {
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.final-heart {
+
+    font-size: 70px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.final h2 {
+
+    font-size:
+        clamp(45px,8vw,85px);
+
+    margin-top: 20px;
+}
+
+.final p {
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    color: #aaa;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 3000;
+
+    animation:
+        floatHeart
+        4s linear forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(500deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px) {
+
+    section {
+        padding:
+            90px 20px;
+    }
+
+    .counter {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .photo {
+
+        height: 400px;
+    }
+
+    .timeline::before {
+
+        left: 8px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-left: 35px;
+
+        padding-right: 0;
+    }
+
+    .envelope-area {
+
+        transform:
+            scale(.82);
+
+        margin-top: 20px;
+    }
+
+    .letter-card {
+
+        padding:
+            45px 25px;
+    }
+
+    .letter-card p {
+
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width:450px) {
+
+    .hero h1 {
+
+        font-size: 58px;
+    }
+
+    .music-button {
+
+        width: 48px;
+        height: 48px;
+
+        right: 15px;
+        top: 15px;
+    }
+
+    .envelope-area {
+
+        transform:
+            scale(.72);
+
+        margin-top: 0;
+
+        margin-bottom: -40px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background"></div>
+
+<div class="stars" id="stars"></div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio id="music" loop>
+
+    <source
+        src="Kadhaippoma-MassTamilan.io.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+
+            A little story about us
+
+        </div>
+
+
+        <h1>
+
+            Our<br>
+            Friendship
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Some people enter our lives by accident...
+
+            and somehow become one of the most
+            beautiful parts of our story. ❤️
+
+        </p>
+
+
+        <button
+            class="primary-button"
+            onclick="scrollToStory()">
+
+            Begin Our Story ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FRIENDSHIP COUNTER
+===================================================== -->
+
+<section id="story">
+
+    <h2 class="section-title">
+
+        How Long We've Been Us ⏳
+
+    </h2>
+
+
+    <p class="section-description">
+
+        And somehow, it still doesn't feel long enough.
+
+    </p>
+
+
+    <div class="counter">
+
+        <div class="counter-box">
+
+            <h2 id="years">
+                0
+            </h2>
+
+            <p>
+                Years
+            </p>
+
+        </div>
+
+
+        <div class="counter-box">
+
+            <h2 id="days">
+                0
+            </h2>
+
+            <p>
+                Days
+            </p>
+
+        </div>
+
+
+        <div class="counter-box">
+
+            <h2 id="hours">
+                0
+            </h2>
+
+            <p>
+                Hours
+            </p>
+
+        </div>
+
+
+        <div class="counter-box">
+
+            <h2 id="minutes">
+                0
+            </h2>
+
+            <p>
+                Minutes
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PHOTOS
+===================================================== -->
+
+<section>
+
+    <h2 class="section-title">
+
+        Our Little Universe 📸
+
+    </h2>
+
+
+    <p class="section-description">
+
+        A few pictures.
+        A million memories.
+
+    </p>
+
+
+    <div class="gallery">
+
+
+        <div class="photo">
+
+            <img
+                src="IMG-20210928-WA0004.jpg"
+                width="350px"
+                height="400px"
+                alt="Memory 1">
+
+            <div class="photo-info">
+
+                <h3>
+                    The Beginning ✨
+                </h3>
+
+                <p>
+                    Where our story started.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+               src="photo.jpg"
+                width="100%"
+                height="600px"
+                alt="Memory 2">
+
+            <div class="photo-info">
+
+                <h3>
+                    Crazy Days 😂
+                </h3>
+
+                <p>
+                    Normal was never our thing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="Snapchat-1366781876.jpg"
+                width="100%"
+                height="500px"
+                alt="Memory 3">
+
+            <div class="photo-info">
+
+                <h3>
+                    Unforgettable 🥹
+                </h3>
+
+                <p>
+                    Some moments stay forever.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="Snapchat-1060306811.jpg"
+                width="100%"
+                height="500px"
+                alt="Memory 4">
+
+            <div class="photo-info">
+
+                <h3>
+                    Our Adventures 🌎
+                </h3>
+
+                <p>
+                    Everywhere is better together.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="Snapchat-398007241.jpg"
+                width="100%"
+                height="500px"
+                alt="Memory 5">
+
+            <div class="photo-info">
+
+                <h3>
+                    Still Us ❤️
+                </h3>
+
+                <p>
+                    After everything.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="file_00000000533071faad86b1504b6dd998.png"
+                width="100%"
+                height="350px"
+                alt="Memory 6">
+
+            <div class="photo-info">
+
+                <h3>
+                    Forever Memories ✨
+                </h3>
+
+                <p>
+                    Chapter of us.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TIMELINE
+===================================================== -->
+
+<section>
+
+    <h2 class="section-title">
+
+        Our Story 🕰️
+
+    </h2>
+
+
+    <p class="section-description">
+
+        From strangers to
+        "you know way too much about me." 😂
+
+    </p>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>
+                    🌱 The Beginning
+                </h3>
+
+                <p>
+
+                    We didn't know that a simple
+                    friendship would eventually become
+                    such an important part of our lives.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>
+                    😂 The Crazy Era
+                </h3>
+
+                <p>
+
+                    Random conversations,
+                    stupid jokes,
+                    unforgettable moments and
+                    things only we understand.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>
+                    🥹 Through Everything
+                </h3>
+
+                <p>
+
+                    Good days, bad days,
+                    silence, arguments and
+                    countless laughs.
+
+                    Somehow we always came back.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>
+                    ♾️ Today
+                </h3>
+
+                <p>
+
+                    Years later,
+                    here we are...
+
+                    Still creating memories.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENVELOPE
+===================================================== -->
+
+<section class="letter-section">
+
+    <h2 class="section-title">
+
+        I Have Something To Say 💌
+
+    </h2>
+
+
+    <p class="section-description">
+
+        There is a little message waiting for you.
+
+    </p>
+
+
+    <div class="envelope-area">
+
+        <div
+            class="envelope"
+            id="envelope"
+            onclick="openEnvelope()">
+
+
+            <div class="envelope-body"></div>
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-front"></div>
+
+            <div class="envelope-heart">
+                🩵
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="click-message">
+
+        ✨ CLICK THE ENVELOPE ✨
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LETTER POPUP
+===================================================== -->
+
+<div
+    class="letter-overlay"
+    id="letterOverlay">
+
+
+    <div class="letter-card">
+
+
+        <button
+            class="close-letter"
+            onclick="closeLetter()">
+
+            ×
+
+        </button>
+
+
+        <div class="big-heart">
+
+            🩵
+
+        </div>
+
+
+        <h2>
+
+            To My Favourite Person
+
+        </h2>
+
+
+        <p>
+
+            I don't always say it...
+
+            but I'm genuinely grateful
+            that you became a part of my life.
+
+            <br><br>
+
+            Thank you for every laugh,
+            every stupid conversation,
+            every crazy moment,
+            and every time you were there.
+
+            <br><br>
+
+            We have shared so many memories,
+            and honestly, some of them
+            are impossible to explain to anyone else.
+
+            <br><br>
+
+            That's what makes this friendship
+            special.
+
+            <br><br>
+
+            No matter where life takes us,
+            I hope we always remember
+            these little moments.
+
+            <br><br>
+
+            Here's to all the memories
+            we've already made...
+
+            and all the memories
+            still waiting for us.
+
+            <br><br>
+
+            <strong>
+                Happy Friendship Anniversary! ❤️
+            </strong>
+
+            <br><br>
+
+            Forever grateful for you. 🥹
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <div>
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+
+        <h2>
+
+            Here's To
+
+            <span
+                style="color:#d68cff;">
+
+                Us.
+
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            More laughter.
+            More adventures.
+            More stupid conversations.
+            More memories.
+
+            <br><br>
+
+            And hopefully...
+
+            many more years
+            of this beautiful friendship.
+
+        </p>
+
+
+        <button
+            class="primary-button"
+            onclick="createHearts()">
+
+            One More Thing ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with ❤️
+    for a friendship that means a lot.
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+const stars =
+    document.getElementById("stars");
+
+
+for (
+    let i = 0;
+    i < 140;
+    i++
+) {
+
+    const star =
+        document.createElement("div");
+
+
+    star.className =
+        "star";
+
+
+    star.style.left =
+        Math.random() * 100 + "%";
+
+
+    star.style.top =
+        Math.random() * 100 + "%";
+
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+
+    star.style.width =
+        (1 + Math.random() * 3) + "px";
+
+
+    star.style.height =
+        star.style.width;
+
+
+    stars.appendChild(star);
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+function scrollToStory() {
+
+    document
+        .getElementById("story")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =====================================================
+   FRIENDSHIP DATE
+===================================================== */
+
+/*
+   CHANGE THIS DATE
+
+   Example:
+
+   2020-09-15
+
+*/
+
+const friendshipDate =
+    new Date(
+        "2020-10-30T00:00:00"
+    );
+
+
+function updateCounter() {
+
+    const now =
+        new Date();
+
+
+    const difference =
+        now - friendshipDate;
+
+
+    if (difference < 0) {
+        return;
+    }
+
+
+    const totalMinutes =
+        Math.floor(
+            difference / 60000
+        );
+
+
+    const totalHours =
+        Math.floor(
+            difference / 3600000
+        );
+
+
+    const totalDays =
+        Math.floor(
+            difference / 86400000
+        );
+
+
+    const years =
+        Math.floor(
+            totalDays / 365.25
+        );
+
+
+    document
+        .getElementById("years")
+        .textContent =
+        years;
+
+
+    document
+        .getElementById("days")
+        .textContent =
+        totalDays;
+
+
+    document
+        .getElementById("hours")
+        .textContent =
+        totalHours;
+
+
+    document
+        .getElementById("minutes")
+        .textContent =
+        totalMinutes;
+
+}
+
+
+updateCounter();
+
+
+setInterval(
+    updateCounter,
+    60000
+);
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
+
+function toggleMusic() {
+
+    if (
+        music.paused
+    ) {
+
+        music
+            .play()
+            .then(() => {
+
+                musicButton
+                    .textContent =
+                    "🔊";
+
+            })
+            .catch(() => {
+
+                alert(
+                    "Click again to play the song."
+                );
+
+            });
+
+    } else {
+
+        music.pause();
+
+        musicButton
+            .textContent =
+            "🎵";
+
+    }
+
+}
+
+
+/* =====================================================
+   ENVELOPE
+===================================================== */
+
+let envelopeOpened = false;
+
+
+function openEnvelope() {
+
+    if (envelopeOpened) {
+        return;
+    }
+
+
+    envelopeOpened = true;
+
+
+    const envelope =
+        document.getElementById(
+            "envelope"
+        );
+
+
+    /* Start flap animation */
+
+    envelope
+        .classList
+        .add("open");
+
+
+    /*
+       Wait until the envelope
+       animation finishes.
+    */
+
+    setTimeout(
+        function() {
+
+            document
+                .getElementById(
+                    "letterOverlay"
+                )
+                .classList
+                .add("show");
+
+
+            createSmallHearts();
+
+        },
+        850
+    );
+
+}
+
+
+/* =====================================================
+   CLOSE LETTER
+===================================================== */
+
+function closeLetter() {
+
+    document
+        .getElementById(
+            "letterOverlay"
+        )
+        .classList
+        .remove("show");
+
+
+    setTimeout(
+        function() {
+
+            document
+                .getElementById(
+                    "envelope"
+                )
+                .classList
+                .remove("open");
+
+
+            envelopeOpened = false;
+
+        },
+        500
+    );
+
+}
+
+
+/* =====================================================
+   CLICK OUTSIDE LETTER
+===================================================== */
+
+document
+    .getElementById(
+        "letterOverlay"
+    )
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+
+                closeLetter();
+
+            }
+
+        }
+    );
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeLetter();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SMALL HEARTS
+===================================================== */
+
+function createSmallHearts() {
+
+    const emojis = [
+        "❤️",
+        "💖",
+        "💕",
+        "💜",
+        "✨"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 18;
+        i++
+    ) {
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "floating-heart";
+
+
+        heart.textContent =
+            emojis[
+                Math.floor(
+                    Math.random() *
+                    emojis.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+
+        heart.style.fontSize =
+            (18 +
+            Math.random() * 25)
+            + "px";
+
+
+        heart.style.animationDuration =
+            (3 +
+            Math.random() * 2)
+            + "s";
+
+
+        document.body
+            .appendChild(
+                heart
+            );
+
+
+        setTimeout(
+            () => heart.remove(),
+            5500
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   BIG HEART EFFECT
+===================================================== */
+
+function createHearts() {
+
+    const emojis = [
+        "❤️",
+        "💖",
+        "💗",
+        "✨",
+        "🥹",
+        "🩵",
+        "🩷"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 50;
+        i++
+    ) {
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "floating-heart";
+
+
+        heart.textContent =
+            emojis[
+                Math.floor(
+                    Math.random() *
+                    emojis.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+
+        heart.style.fontSize =
+            (18 +
+            Math.random() * 30)
+            + "px";
+
+
+        heart.style.animationDuration =
+            (3 +
+            Math.random() * 3)
+            + "s";
+
+
+        document.body
+            .appendChild(
+                heart
+            );
+
+
+        setTimeout(
+            () => heart.remove(),
+            6500
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
